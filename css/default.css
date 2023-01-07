@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* ::selection {
+  background-color: #9a40f4;
+  color: #fff;
+  opacity: 0.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  cursor: default;
+}
+
+/*# sourceMappingURL=default.css.map */

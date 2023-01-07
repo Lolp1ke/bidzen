@@ -1,0 +1,144 @@
+.navbar {
+  position: relative;
+  background-color: #06060e;
+  padding: 40px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 1140px) {
+  .navbar {
+    justify-content: normal;
+  }
+}
+.navbar__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.navbar__input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 780px) {
+  .navbar__input {
+    display: none;
+  }
+}
+.navbar__input-input-box {
+  background: #17171f;
+  border: 1px solid #33333a;
+  border-radius: 50px;
+  padding: 15px 20px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+}
+.navbar__input-input-box:focus {
+  outline: none;
+}
+.navbar__input img {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+@media (max-width: 1140px) {
+  .navbar__list {
+    position: absolute;
+    display: flex;
+    left: -100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    background-color: #06060e;
+    transition: all var(--animation-speed) ease;
+    z-index: 50;
+  }
+}
+.navbar__list.active-navbar-list {
+  left: 0;
+  visibility: visible;
+}
+.navbar__body {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+@media (max-width: 1140px) {
+  .navbar__body {
+    margin: auto;
+    flex-direction: column;
+  }
+}
+.navbar__link {
+  font-size: 18px;
+}
+.navbar__button {
+  position: relative;
+  padding: 15px 40px;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 1140px) {
+  .navbar__button {
+    margin-left: auto;
+  }
+}
+.navbar__button p {
+  cursor: pointer;
+}
+@media (max-width: 780px) {
+  .navbar__button p {
+    display: none;
+  }
+}
+
+.burger__button {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 18px;
+  z-index: 100;
+}
+@media (min-width: 1140px) {
+  .burger__button {
+    display: none;
+  }
+}
+.burger__button span {
+  top: calc(50% - 1px);
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all var(--animation-speed) ease;
+}
+.burger__button span:first-child {
+  top: 0;
+}
+.burger__button span:last-child {
+  top: auto;
+  bottom: 0;
+}
+.burger__button.active-burger span {
+  transform: scale(0);
+}
+.burger__button.active-burger span:first-child {
+  transform: rotate(135deg);
+  top: calc(50% - 1px);
+}
+.burger__button.active-burger span:last-child {
+  transform: rotate(45deg);
+  bottom: calc(50% - 1px);
+}
+
+/*# sourceMappingURL=navigation.css.map */

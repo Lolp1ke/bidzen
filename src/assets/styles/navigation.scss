@@ -1,0 +1,163 @@
+.navbar {
+	position: relative;
+	background-color: #06060e;
+	padding: 40px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	@media (max-width: 1140px) {
+		justify-content: normal;
+	}
+
+	// .navbar__main
+	&__main {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	// .navbar__logo
+	&__logo {
+	}
+
+	// .navbar__input
+	&__input {
+		position: relative;
+		display: flex;
+		align-items: center;
+		@media (max-width: 780px) {
+			display: none;
+		}
+
+		&-input-box {
+			background: #17171f;
+			border: 1px solid #33333a;
+			border-radius: 50px;
+			padding: 15px 20px;
+			color: #ffffff;
+			font-weight: 600;
+			font-size: 15px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		img {
+			position: absolute;
+			right: 10px;
+			cursor: pointer;
+		}
+	}
+
+	// .navbar__list
+	&__list {
+		@media (max-width: 1140px) {
+			position: absolute;
+			display: flex;
+			left: -100%;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			visibility: hidden;
+			background-color: #06060e;
+			transition: all var(--animation-speed) ease;
+			z-index: 50;
+		}
+
+		&.active-navbar-list {
+			left: 0;
+			visibility: visible;
+		}
+	}
+
+	// .navbar__body
+	&__body {
+		display: flex;
+		align-items: center;
+		gap: 25px;
+		@media (max-width: 1140px) {
+			margin: auto;
+			flex-direction: column;
+		}
+	}
+
+	// .navbar__item
+	&__item {
+	}
+
+	// .navbar__link
+	&__link {
+		font-size: 18px;
+	}
+
+	// .navbar__button
+	&__button {
+		position: relative;
+		padding: 15px 40px;
+		background-color: var(--accent-color);
+		border-radius: 50px;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		@media (max-width: 1140px) {
+			margin-left: auto;
+		}
+
+		p {
+			cursor: pointer;
+			@media (max-width: 780px) {
+				display: none;
+			}
+		}
+	}
+}
+
+.burger__button {
+	@media (min-width: 1140px) {
+		display: none;
+	}
+	position: relative;
+	display: block;
+	width: 30px;
+	height: 18px;
+	z-index: 100;
+
+	span {
+		top: calc(50% - 1px);
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #ffffff;
+		transition: all var(--animation-speed) ease;
+
+		&:first-child {
+			top: 0;
+		}
+
+		&:last-child {
+			top: auto;
+			bottom: 0;
+		}
+	}
+
+	&.active-burger {
+		span {
+			transform: scale(0);
+
+			&:first-child {
+				transform: rotate(135deg);
+				top: calc(50% - 1px);
+			}
+
+			&:last-child {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}

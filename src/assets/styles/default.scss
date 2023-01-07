@@ -1,0 +1,58 @@
+:root {
+	--accent-color: #9a40f4;
+	--animation-speed: 0.5s;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	font-family: "Inter", "sans-serif";
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+::selection {
+	background-color: #9a40f4;
+	color: #fff;
+	opacity: 0.6;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	cursor: default;
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+.title {
+	font-size: 42px;
+	font-weight: 700;
+}
+
+.text {
+	font-size: 18px;
+	font-weight: 600;
+	color: #989881;
+}

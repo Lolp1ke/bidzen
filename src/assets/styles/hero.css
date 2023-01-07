@@ -1,0 +1,56 @@
+.hero {
+  position: relative;
+  background-color: #14141f;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(2.5rem, 1.18rem + 5.63vw, 6.25rem);
+  padding-top: 70px;
+  padding-bottom: 70px;
+  gap: 30px;
+}
+@media (max-width: 620px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.hero__article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.hero__title {
+  font-size: clamp(2rem, 1.164rem + 3.57vw, 4.375rem);
+  font-weight: 700;
+  max-width: clamp(28.125rem, 21.523rem + 28.17vw, 46.875rem);
+}
+.hero__text {
+  font-size: clamp(1rem, 0.912rem + 0.38vw, 1.25rem);
+  font-weight: 700;
+  max-width: clamp(18.75rem, 13.248rem + 23.47vw, 34.375rem);
+}
+.hero__buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hero___button {
+  padding: 20px clamp(1.563rem, 1.232rem + 1.41vw, 2.5rem);
+  border: 1px solid #33333a;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.hero___button:nth-child(odd) {
+  background-color: var(--accent-color);
+}
+.hero___button:nth-child(even) {
+  background-color: #ffffff;
+  color: #000000;
+}
+.hero__img {
+  width: clamp(18.75rem, 13.468rem + 22.54vw, 33.75rem);
+}
+
+/*# sourceMappingURL=hero.css.map */
