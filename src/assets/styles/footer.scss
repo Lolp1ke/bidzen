@@ -1,0 +1,140 @@
+.footer {
+	position: relative;
+	background-color: #030303;
+	padding: 200px 0 100px clamp(2.188rem, 1.642rem + 2.33vw, 3.75rem);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 30px;
+
+	// .footer__logo
+	&__logo {
+		object-fit: cover;
+	}
+
+	// .footer__text
+	&__text {
+		width: 250px;
+	}
+
+	// .footer__social
+	&__social {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+	}
+
+	// .footer__social-link
+	&__social-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background-color: #1f1f1f;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: #9a40f4;
+		}
+	}
+
+	// .footer__social-icon
+	&__social-icon {
+	}
+}
+
+.news {
+	position: absolute;
+	top: -25%;
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	justify-content: space-between;
+	left: 50%;
+	transform: translate(-50%, 12.5%);
+	width: 80%;
+	padding: 70px 90px;
+	border-radius: 30px;
+	background: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(101, 108, 163, 0.2) 0%,
+			rgba(99, 69, 237, 0) 100%
+		),
+		conic-gradient(
+			from 180deg at 50% 50%,
+			#ffb4ff -93.75deg,
+			rgba(146, 129, 255, 0.35) 8.57deg,
+			rgba(56, 35, 156, 0.393458) 83.08deg,
+			rgba(205, 58, 250, 0.973958) 185.62deg,
+			rgba(205, 58, 250, 0.973958) 202.54deg,
+			rgba(205, 58, 250, 0.973958) 202.58deg,
+			rgba(201, 57, 248, 0.960187) 217.75deg,
+			rgba(112, 137, 227, 0.987687) 251.25deg,
+			#ffb4ff 266.25deg,
+			rgba(146, 129, 255, 0.35) 368.57deg
+		);
+
+	@media (max-width: 1290px) {
+		flex-direction: column;
+		transform: translate(-50%, -4.5%);
+	}
+
+	&__article {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-size: clamp(1.75rem, 1.445rem + 1.3vw, 2.625rem);
+		font-weight: 600;
+	}
+
+	&__text {
+		font-size: clamp(0.875rem, 0.788rem + 0.37vw, 1.125rem);
+		font-weight: 600;
+	}
+
+	&__form {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	&__input {
+		border-radius: 80px;
+		font-size: clamp(0.875rem, 0.788rem + 0.37vw, 1.125rem);
+		font-weight: 600;
+		color: #616161;
+		padding: 20px 30px;
+		width: clamp(15.625rem, 7.994rem + 32.56vw, 37.5rem);
+		border: none;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		border: none;
+		background-color: #6345ed;
+		padding: 10px 10px;
+		margin: auto;
+		right: 10px;
+		font-size: clamp(0.875rem, 0.788rem + 0.37vw, 1.125rem);
+		font-weight: 600;
+		border-radius: 50px;
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 10px;
+		align-items: center;
+
+		&-text {
+			@media (max-width: 480px) {
+				display: none;
+			}
+		}
+	}
+}

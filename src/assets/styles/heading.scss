@@ -1,0 +1,45 @@
+.heading {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	margin: 0 clamp(0.313rem, -1.759rem + 8.84vw, 6.25rem);
+
+	@media (max-width: 495px) {
+		flex-direction: column;
+	}
+
+	&__article {
+		width: clamp(17.5rem, 15.299rem + 9.39vw, 23.75rem);
+	}
+
+	// .heading__title
+	&__title {
+	}
+
+	// .heading__description
+	&__description {
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 20px;
+		background-color: #b75cc6;
+		border-radius: 50px;
+
+		&-image {
+		}
+
+		&-text {
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: 600;
+			@media (max-width: 602px) and (min-width: 495px) {
+				display: none;
+			}
+		}
+	}
+}

@@ -13,6 +13,9 @@ function Navigation() {
 		navbarListState === ""
 			? setNavbarListState("active-navbar-list")
 			: setNavbarListState("");
+		document.body.style.overflow === "hidden"
+			? (document.body.style.overflow = "visible")
+			: (document.body.style.overflow = "hidden");
 	}
 
 	return (
