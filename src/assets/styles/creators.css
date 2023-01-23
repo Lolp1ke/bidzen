@@ -20,6 +20,8 @@
   flex-direction: column;
   padding: 20px;
   gap: 10px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
 }
 .creators__desc {
@@ -28,7 +30,7 @@
 }
 .creators__imgs {
   display: grid;
-  gap: 10px 10px;
+  grid-gap: 10px 10px;
   grid-template-areas: "big big small small2" "big big long-small long-small" ". . . .";
   place-items: center;
 }
@@ -50,7 +52,8 @@
   grid-area: long-small;
 }
 .creators__img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .creators__creator {
   display: flex;
@@ -70,5 +73,3 @@
   font-weight: 600;
   color: #90a0a8;
 }
-
-/*# sourceMappingURL=creators.css.map */
